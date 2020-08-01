@@ -28,6 +28,7 @@ class Model:
         self.statusAccepted = 1
         #JWT experation time in minutes
         self.jwtExperationTime = 30
+        # The exposure of the hard-coded jwt secret key is a consern...
         self.jwtSecret = '73869a97078920dd470b20a6f7487c81'
     def getReject(self, err_type):
         response = {'status':self.statusRejected,'error':self.apiErrors[err_type]}
