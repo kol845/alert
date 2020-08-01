@@ -1,0 +1,10 @@
+{
+    "ARG_MISSING":{
+        "code":"ARG_MISSING",
+        "message":"Faulty request. Argument(s) missing."
+    },
+    "LOGIN_ERROR":{
+        "code":"LOGIN_ERROR",
+        "message":"The username or password was not correct!"
+    }
+}
