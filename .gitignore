@@ -7,6 +7,24 @@ __pycache__
 #
 frontend/.DS_Store
 
+# Gradle
+/frontend/build/
+/frontend/RNTester/android/app/build/
+/frontend/RNTester/android/app/gradle/
+/frontend/RNTester/android/app/gradlew
+/frontend/RNTester/android/app/gradlew.bat
+/frontend/ReactAndroid/build/
+/frontend/ReactAndroid/gradle/
+/frontend/ReactAndroid/gradlew
+/frontend/ReactAndroid/gradlew.bat
+
+# Android
+frontend/.idea
+frontend/.gradle
+frontend/local.properties
+frontend/*.iml
+/frontend/android/
+frontend/android/
 # Xcode
 #
 frontend/build/

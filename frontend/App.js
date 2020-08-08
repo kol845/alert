@@ -6,7 +6,7 @@
  * @format
  * @flow strict-local
  */
-
+import { Input, Button } from 'react-native-elements';
 import React from 'react';
 import {
   SafeAreaView,
@@ -15,6 +15,7 @@ import {
   View,
   Text,
   StatusBar,
+  TextInput
 } from 'react-native';
 import SrcApp from './src';
 import {
