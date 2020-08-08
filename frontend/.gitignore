@@ -57,3 +57,6 @@ frontend/*.jsbundle
 
 # CocoaPods
 frontend/ios/Pods/
+
+# Android build
+frontend/android/app/build
