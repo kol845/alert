@@ -62,5 +62,14 @@ def removeUser(uname):
     WHERE uname = '{uname}'
     ''')
     conn.commit()
-createUserPrep()
+def getAllUsers():
+    c.execute(f'''
+    SELECT * FROM user
+    ''')
+    rows = c.fetchall()
+    conn.close()
+    return rows
+rows = getAllUsers()
+for r in rows:
+    print(r)
 

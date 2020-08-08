@@ -7,7 +7,7 @@ import jwt
 from utils.files import get_full_path
 import base64
 import time
-
+import datetime as dt
 
 #Flask printing:
 #print('Hello world!', file=sys.stderr)
@@ -33,7 +33,7 @@ class Model:
     def getReject(self, err_type):
         response = {'status':self.statusRejected,'error':self.apiErrors[err_type]}
         return response
-    def getAccept(self, data):
+    def getAccept(self, data={}):
         response = {'status':self.statusAccepted}
         response.update(data)
         return response
@@ -60,6 +60,20 @@ class Model:
                 return self.getAccept({'uid':uid, 'uname':uname, 'jwt':token})
             else:
                 return self.getReject('LOGIN_ERROR')
+        else:
+            error = self.getReject("ARG_MISSING")
+            return error
+    def registerUser(self, data):
+        if 'uname' in data and 'passwd' in data:
+            passwd = data['passwd']
+            uname = data['uname']
+            query = self.db.checkIfUsernameExists(uname)
+            if(len(query)==0):
+                hashed_passwd = Bcrypt().generate_password_hash(passwd).decode('utf-8')
+                reg_date = dt.datetime.now()
+                self.db.registerUser(uname, hashed_passwd, reg_date)
+                return self.getAccept()
+            return self.getReject("UNAME_ALREADY_EXISTS")
         else:
             error = self.getReject("ARG_MISSING")
             return error

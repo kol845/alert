@@ -5,3 +5,5 @@ class Controller:
         self.model = Model()
     def login(self, data):
         return self.model.login(data)
+    def registerUser(self,data):
+        return self.model.registerUser(data)

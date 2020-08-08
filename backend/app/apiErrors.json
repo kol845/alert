@@ -6,5 +6,9 @@
     "LOGIN_ERROR":{
         "code":"LOGIN_ERROR",
         "message":"The username or password was not correct!"
+    },
+    "UNAME_ALREADY_EXISTS":{
+        "code":"UNAME_ALREADY_EXISTS",
+        "message":"Username already exists. Please try another one."
     }
 }

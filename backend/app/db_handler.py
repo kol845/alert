@@ -59,3 +59,12 @@ class DB:
         rows = c.fetchall()
         conn.close()
         return rows
+    def registerUser(self, uname, passwd, reg_date):
+        conn = self.connect()
+        c = conn.cursor()
+        c.execute(f'''
+        INSERT INTO user(uname, passwd, reg_date)
+        VALUES('{uname}','{passwd}','{reg_date}')
+        ''')
+        conn.commit()
+        conn.close()

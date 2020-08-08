@@ -18,3 +18,8 @@ def login():
     response = contr.login(data)
     return response
 
+@app.route("/api/register", methods=['POST'])
+def register():
+    data = request.args
+    response = contr.registerUser(data)
+    return response

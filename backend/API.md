@@ -8,9 +8,17 @@
 
 ## /api/login
 
-* **get** login attempt
+* **post** login attempt
   * *request* : (uname, passwd)
-  * *response* : (status, uname, jwt) 
+  * *successfull response* : (status = 1, uname, jwt) 
+  * *unsuccessfull response* : (status = 2, errorObject) 
+
+## /api/register
+
+* **post** registation of user
+  * *request* : (uname, passwd)
+  * *successfull response* : (status = 1) 
+  * *unsuccessfull response* : (status = 2, errorObject) 
 
 
 # Structure
