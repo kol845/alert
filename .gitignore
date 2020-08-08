@@ -20,11 +20,10 @@ frontend/.DS_Store
 
 # Android
 frontend/.idea
-frontend/.gradle
+frontend/android/.gradle
 frontend/local.properties
 frontend/*.iml
-/frontend/android/
-frontend/android/
+frontend/android/app/build
 # Xcode
 #
 frontend/build/
