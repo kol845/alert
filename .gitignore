@@ -82,3 +82,6 @@ frontend/*.jsbundle
 
 # CocoaPods
 frontend/ios/Pods/
+
+# Ignore all python caches
+__pycache__/
